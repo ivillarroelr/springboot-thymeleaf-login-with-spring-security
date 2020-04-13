@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Menu Ingreso</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/menu.css" th:href="@{/css/menu.css}">
+
+</head>
+<body>
+<section class="our-webcoderskull padding-lg">
+    <div class="container">
+        <div class="row heading heading-icon text-center">
+            <h1 class="mb-5" th:inline="text">Sitio administrativo de [[${#httpServletRequest.remoteUser}]]!</h1>
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-2 col-md-offset-5 mb-5">
+                    <form th:action="@{/logout}" method="post">
+                        <!--                    <input class="btn btn-danger" type="submit" value="Cerrar Sesion"/>-->
+                        <button class="btn-floating btn-danger btn-lg text-center"> Desconectarse </button>
+                    </form>
+                </div>
+                <div class="col-md-5"></div>
+            </div>
+
+        </div>
+        <ul class="row">
+            <li class="col-12">
+                <div class="cnt-block equal-hight" style="height: 349px;">
+                    <figure><img src="../static/img/admin.png"  th:src="@{/img/admin.png}" class="img-responsive" alt=""></figure>
+                    <h3>Bienvenido Administrador</h3>
+                    <p>Posees el rol de administrador</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
+
+
+
+
+<!--<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>-->
+<!--<form th:action="@{/logout}" method="post">-->
+<!--    <input type="submit" value="Cerrar Sesion"/>-->
+<!--</form>-->
+<!--<h1><a th:href="@{/admin}"> admin</a> | <a th:href="@{/user}"> user</a></h1>-->
